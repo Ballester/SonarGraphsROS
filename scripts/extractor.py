@@ -1,13 +1,12 @@
+import matplotlib.pyplot as plt
 import numpy as np
+import cv2
+
 from math import sqrt, atan, degrees
 from time import sleep
 from sensor_msgs.msg import Image
-import cv2
 from cv_bridge import CvBridge, CvBridgeError
-
-import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse
-import cv2
 
 class GaussianFeatureExtractor(object):
     
