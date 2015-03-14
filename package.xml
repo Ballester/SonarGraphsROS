@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package>
-  <name>sonar_graphs</name>
+  <name>sonar_graphs_ros</name>
   <version>0.0.0</version>
-  <description>The sonar_graphs package</description>
+  <description>The SonarGraphsROS package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
-  <maintainer email="ballester@todo.todo">ballester</maintainer>
+  <maintainer email="pedballester@gmail.com">ballester</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->

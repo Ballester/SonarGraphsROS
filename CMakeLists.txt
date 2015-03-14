@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(sonar_graphs)
+project(sonar_graphs_ros)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -81,7 +81,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES sonar_graphs
+#  LIBRARIES SonarGraphsROS
 #  CATKIN_DEPENDS roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
@@ -98,19 +98,19 @@ include_directories(
 )
 
 ## Declare a cpp library
-# add_library(sonar_graphs
-#   src/${PROJECT_NAME}/sonar_graphs.cpp
+# add_library(SonarGraphsROS
+#   src/${PROJECT_NAME}/SonarGraphsROS.cpp
 # )
 
 ## Declare a cpp executable
-# add_executable(sonar_graphs_node src/sonar_graphs_node.cpp)
+# add_executable(SonarGraphsROS_node src/SonarGraphsROS_node.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
-# add_dependencies(sonar_graphs_node sonar_graphs_generate_messages_cpp)
+# add_dependencies(SonarGraphsROS_node SonarGraphsROS_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(sonar_graphs_node
+# target_link_libraries(SonarGraphsROS_node
 #   ${catkin_LIBRARIES}
 # )
 
@@ -129,7 +129,7 @@ install(PROGRAMS
 )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS sonar_graphs sonar_graphs_node
+# install(TARGETS SonarGraphsROS SonarGraphsROS_node
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -154,7 +154,7 @@ install(PROGRAMS
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_sonar_graphs.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_SonarGraphsROS.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
