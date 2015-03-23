@@ -12,7 +12,7 @@ class SonarNodes(object):
     
     #Starts to listen to sonar images
     def sonar_listener(self):
-        rospy.Subscriber("sonar_image", Image, self.callback)
+        rospy.Subscriber("sonar_image_gray", Image, self.callback)
 
     def gaussian_publisher(self):
         self.pub_gauss = rospy.Publisher('gaussian_image', Image, queue_size=10)
@@ -29,7 +29,7 @@ class SonarNodes(object):
         
         #publishing graph image
         graph_image = self.extract.drawGraph()
-        self.pub_graph.publish(self.extract.convertImage(graph_image))
+        self.pub_graph.publish(self.extract.bridge.cv2_to_imgmsg(graph_image, "rgb8"))
         
 
 if __name__ == '__main__':
